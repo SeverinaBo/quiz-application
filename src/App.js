@@ -1,24 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
+import LogIn from "./RegistrationAndLogin/LogIn";
+import Register from "./RegistrationAndLogin/Register";
 
 function App() {
+    const [currentForm,setCurrentForm] = useState('login');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <div className="App">
+            {
+                currentForm === "login" ? <LogIn /> : <Register /> //if condition is true it will return first statement if it is false it will return second
+            }
+        </div>
   );
 }
 
