@@ -1,3 +1,17 @@
+Quiz application with React:
+
+An application, where you can create quizes, or use default quizes, and play with friends.
+
+Should have generated game code and QR so that players could join in one game. Should have music and maybe sound effects.
+
+Users should be able to choose avatar's and nicknames.
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
