@@ -1,26 +1,31 @@
-import React, {useState} from "react";
-import LogIn from "./RegistrationAndLogin/LogIn";
-import Register from "./RegistrationAndLogin/Register";
+import React from "react";
 
-import AppStyle from "./style/AppStyle.css";
 import SignIn from "./SignInAndSignUpMui/SignIn";
+import SignUp from "./SignInAndSignUpMui/SignUp";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+
+} from "react-router-dom";
 
 
 function App() {
-  /*  const [currentForm,setCurrentForm] = useState('login');
 
-    const toggleForm = (formName) =>{
-        setCurrentForm(formName);
-    }*/
 
   return (
-      <SignIn />)
-/*        <div className="App">
-            {
-                currentForm === "login" ? <LogIn  onFormSwitch={toggleForm}/> : <Register onFormSwitch={toggleForm} /> //if condition is true it will return first statement if it is false it will return second
-            }
-        </div>
-  );*/
+      <>
+        <Router>
+        <Switch>
+          <Route exact path = "/"><SignIn/></Route>
+          <Route path = "./SignInAndSignUpMui/SignUp"><SignUp/></Route>
+        </Switch>
+      </Router>
+
+        </>
+  )
+
 }
 
 export default App;
